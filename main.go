@@ -1,6 +1,6 @@
 /*
 这里是jt808 数据编码和解码主要文件
-运行此deme, 请运行 server.go中的 StartGPSServer 函数
+如果想运行此demo, 请运行 server.go中的 StartGPSServer 函数
 */
 
 package main
