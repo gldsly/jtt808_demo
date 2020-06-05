@@ -51,6 +51,7 @@ var (
 
 type cacheVehicleData struct {
 	Speed     int
+	PerState  bool
 	TimeStamp int64
 }
 
