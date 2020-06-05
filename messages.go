@@ -367,11 +367,13 @@ func UploadLocation(request *ProtocolData, conn net.Conn) {
 	var saveTag = false
 	if ok {
 		// 本次速度不为 0 并且速度 大于 5km/h 进行数据存储
-		if currentDataSpeed != 0 && currentDataSpeed > 50 {
+		if currentDataSpeed != 0 && currentDataSpeed > 51 {
 			saveTag = true
 			// 上次速度不为0, 本次速度为 0   保存
 		} else if v.Speed != 0 && currentDataSpeed == 0 {
-			saveTag = true
+			if v.PerState {
+				saveTag = true
+			}
 		}
 	} else {
 		// 车辆数据未缓存, 保存
